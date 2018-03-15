@@ -5,7 +5,6 @@ window.addEventListener('load', () => {
 })
 
 getJson = (e) => {
-    // limpiar contenedor de productos
     
     fetch(`https://api.mercadolibre.com/sites/MLM/search?q=ecologico`)
         .then(response => {
@@ -62,14 +61,13 @@ filterProducts = () => {
         return prodctF.title.toLowerCase().indexOf(inputValue) >= 0
     });
     console.log(prueba);
-    paintProducsFilters(prueba)
-
+    paintProducsFilters(prueba);
 }
 searchInput.addEventListener('keyup', filterProducts);
 
 paintProducsFilters = (prueba) => {
-
-    containerAll.innerText = '';
+    // container.innerText = '';
+    // container.innerHTML = '';
     prueba.forEach(producSelected => {
 
         let templateFilters = `
@@ -86,7 +84,7 @@ paintProducsFilters = (prueba) => {
                         <div data-id"${producSelected.id}" class="buttonShop">Agregar a carrito</div>                   
                 </div>
             `
-            containerAll.insertAdjacentHTML('beforeend', templateFilters);
+            container.insertAdjacentHTML('beforeend', templateFilters);
     })
     let elementsData = document.getElementsByClassName('elements-data');
     elementEvent(elementsData);
@@ -230,7 +228,6 @@ paintInfoModal = (dataSet, description) => {
     `;
 }
 
-
 const containerCart = document.getElementById("container-cart");
 const containerCard = document.getElementById("container-card");
 
@@ -267,9 +264,9 @@ showInput = (e) => {
     containerInput.classList.add("d-block");
 };
 
-showMenu = (e) => {
+showMenu = (e) => {    
     containerInput.classList.remove("d-block");
-    containerInput.classList.add("d-none");
+    containerInput.classList.add("d-none");   
 };
 
 let btnSearch = document.getElementById("btn-search").addEventListener("click", showInput);
