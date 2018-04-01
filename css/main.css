@@ -198,6 +198,18 @@ body {
     width: auto;
 }
 
+.copy {
+    background-color: #0c4d6c;
+    color: white;
+    height: 50px;
+}
+
+.copy > p {
+    padding: 12px;
+    margin: 0 auto;
+
+}
+
 .description-modal {
     display: block;
 }
@@ -224,24 +236,14 @@ body {
     cursor: pointer;
 }
 
-.w-100 {
-    width: 30%;
-}
-
-.copy {
-    background-color: #0c4d6c;
-    color: white;
-    height: 50px;
-}
-
-.copy p {
-    padding: 12px;
-    padding-left: 400px;
+.width-image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .color-blue {
     color: #1583b7;
-
     text-align: center;
 }
 
@@ -255,4 +257,15 @@ body {
 
 .nav-item {
     padding-left: 10px;
+}
+
+#paypal-button-container {
+    text-align: center;
+}
+
+.price-style {
+  background-color: white;
+  text-align: center;
+  font-size: 30px;
+  margin: 20px;
 }
