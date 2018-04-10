@@ -238,7 +238,7 @@ getPayPal = (total3) => {
 addCounter = () => {
     let counterItems = parseInt(document.getElementById('counter-items').innerText);
     let counter = document.getElementById('counter-items');
-    counterItems += 1;
+    counterItems += 1;                      
     counter.innerHTML = counterItems;
 }
 
