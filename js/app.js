@@ -1,5 +1,5 @@
 const container = document.getElementById('container');
-const containerAll = document.getElementById("container-all")
+const containerAll = document.getElementById("container-all");
 window.addEventListener('load', () => {
     getJson();
 })
